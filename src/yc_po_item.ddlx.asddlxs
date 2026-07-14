@@ -1,0 +1,66 @@
+@Metadata.layer: #CUSTOMER
+@UI.headerInfo: { 
+    title: { 
+        label: 'Purchase Item Inforation',
+        type : #STANDARD,
+        value : 'PoItem'
+    }
+}
+annotate entity YC_PO_ITEM
+    with 
+{
+
+@UI.facet: [
+ { 
+   id: 'ItemID',
+   purpose: #STANDARD,
+   position: 10,
+   type:#IDENTIFICATION_REFERENCE,
+//   type: #COLLECTION,
+   label: 'Item Information'
+   }
+ ] 
+    @UI.lineItem: [{ position: 10, label: 'Purchase Order' }]
+    @UI.identification: [{ position: 10, label: 'Purchase Order'  }]
+    PoNum;
+    
+    @UI.lineItem: [{ position: 20, label: 'Item Number' }]
+    @UI.identification: [{ position: 20, label: 'Item Number'  }]
+    PoItem;
+    
+    @UI.lineItem: [{ position: 30, label: 'Item text' }]
+    @UI.identification: [{ position: 30, label: 'Item Text'  }]
+    ItemText;
+    
+    @UI.lineItem: [{ position: 40, label: 'Material' }]
+    @UI.identification: [{ position: 40, label: 'Material'  }]
+    Material;
+    
+    @UI.lineItem: [{ position: 50, label: 'Plant' }]
+    @UI.identification: [{ position: 50, label: 'Plant'  }]
+    Plant;
+    
+    @UI.lineItem: [{ position: 60, label: 'Storage Location' }]
+    @UI.identification: [{ position: 60, label: 'Storage Location'  }]
+    StorageLoc;
+    
+    @UI.lineItem: [{ position: 70, label: 'Quantity' }]
+    @UI.identification: [{ position: 70, label: 'Quantity'  }]
+    Qty;
+    
+    @UI.lineItem: [{ position: 80, label: 'Order Unit' }]
+    @UI.identification: [{ position: 80, label: 'Order Unit'  }]
+    Uom;
+    
+     @UI.lineItem: [{ position: 85, label: 'discount' }]
+    @UI.identification: [{ position: 80, label: 'discount'  }]
+    discount;
+    
+    @UI.lineItem: [{ position: 90, label: 'Product Price' }]
+    @UI.identification: [{ position: 90, label: 'Product Price' }]
+    ProductPrice;
+    
+    @UI.lineItem: [{ position: 100, label: 'Price Unit' }]
+    @UI.identification: [{ position: 100, label: 'Price Unit'  }]
+    PriceUnit;
+}
