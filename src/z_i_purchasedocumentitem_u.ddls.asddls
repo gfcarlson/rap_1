@@ -5,6 +5,7 @@
 @EndUserText.label: 'Purchase Document Item Unamanaged'
 //@ObjectModel.writeActivePersistence: 'ZPURCHDOCITEM'
 @VDM.viewType: #COMPOSITE
+@Metadata.allowExtensions:true
 define view Z_I_PurchaseDocumentItem_U  as select from Z_I_PurchaseDocumentItem
   association to parent Z_I_PurchaseDocument_U as _PurchaseDocument on $projection.PurchaseDocument = _PurchaseDocument.PurchaseDocument
 {

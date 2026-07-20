@@ -7,6 +7,7 @@
 //@ObjectModel.compositionRoot: true
 //@ObjectModel.writeActivePersistence: 'ZPURCHDOCUMENT'
 @VDM.viewType: #COMPOSITE
+@Metadata.allowExtensions:true
 define root view Z_I_PurchaseDocument_U  as select from Z_I_PurchDocOverallPrice
   composition [0..*] of Z_I_PurchaseDocumentItem_U as _PurchaseDocumentItem
 //  association [0..1] to I_Indicator                 as _IsApprovalRequired   on $projection.IsApprovalRequired = _IsApprovalRequired.IndicatorValue
