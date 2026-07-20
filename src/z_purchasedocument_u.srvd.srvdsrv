@@ -1,0 +1,4 @@
+@EndUserText.label: 'Service Definition'
+define service Z_purchasedocument_u {
+  expose Z_I_PurchaseDocument_U as PurchaseDocument_U;
+}
