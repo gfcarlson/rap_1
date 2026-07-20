@@ -1,6 +1,6 @@
 @AbapCatalog.sqlViewName: 'ZIPURCHDOCPRICE'
 @EndUserText.label: 'Purchase Document Item'
-@AccessControl.authorizationCheck: #CHECK
+@AccessControl.authorizationCheck: #NOT_REQUIRED
 @VDM.viewType: #COMPOSITE
 @ObjectModel.representativeKey: 'PurchaseDocument'
 @ObjectModel.semanticKey: ['PurchaseDocument']

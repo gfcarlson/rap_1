@@ -1,5 +1,5 @@
 @Metadata.layer: #CORE
-annotate view z_c_purchdocbudgetovp_gfc with
+annotate view Z_C_PurchaseDocBudgetOVP with
 {
   @EndUserText.label: 'Purchasing Document'
   @UI: {
@@ -9,7 +9,7 @@ annotate view z_c_purchdocbudgetovp_gfc with
       type: #FOR_INTENT_BASED_NAVIGATION, 
       semanticObjectAction: 'manage'}]
   }
-  purchasedocument;
+  PurchaseDocument;
   @UI: {
   lineItem:[{
    type: #AS_DATAPOINT,
@@ -23,7 +23,7 @@ annotate view z_c_purchdocbudgetovp_gfc with
 
   crea_date_time;
   @UI.lineItem: [{position: 20}]
-  purchasingorganization;
+  PurchasingOrganization;
   @UI: {
   lineItem: [{
   type: #AS_DATAPOINT,
@@ -42,5 +42,5 @@ annotate view z_c_purchdocbudgetovp_gfc with
   }
   }
   }
-  budgetutilization;
+  BudgetUtilization;
 }

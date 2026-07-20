@@ -150,12 +150,12 @@ annotate view Z_C_PurchaseDocumentLrp with
   PurchasingOrganization;
 
 
-  @UI:  {
+/*  @UI:  {
     lineItem: [{ importance: #HIGH, position: 80, criticality: 'OverallPriceCriticality', criticalityRepresentation: #WITH_ICON, value: 'IsApprovalRequired' }],
     textArrangement: #TEXT_ONLY,
     dataPoint: { title: 'Is Approval Required', criticality: 'OverallPriceCriticality' } }
   IsApprovalRequired;
-
+*/
 
   @UI: {
     lineItem: [{ importance: #MEDIUM, position: 90 }],
@@ -167,7 +167,7 @@ annotate view Z_C_PurchaseDocumentLrp with
    }
   crea_date_time;
 
-  @UI: {
+  /*@UI: {
     lineItem: [{ importance: #MEDIUM, position:100 }],
     fieldGroup: [{ qualifier: 'BasicDataFieldGroup', position: 20, importance: #HIGH }]
     }
@@ -176,6 +176,7 @@ annotate view Z_C_PurchaseDocumentLrp with
   selectionField:[ { exclude: true }]
    }
   crea_uname;
+  */
   @UI: {
   lineItem: [{ importance: #MEDIUM, position: 110 }],
   fieldGroup: [{ qualifier: 'BasicDataFieldGroup', position: 30, importance: #HIGH }]
@@ -201,12 +202,12 @@ annotate view Z_C_PurchaseDocumentLrp with
   selectionField:[ { exclude: true }]
  }
   _Currency;
-  @UI.hidden: true
+/*  @UI.hidden: true
   @Consumption.filter.hidden: true
   @UI: {
   selectionField:[ { exclude: true }]
  }
-  _IsApprovalRequired;
-
+//  _IsApprovalRequired;
+*/
 
 }

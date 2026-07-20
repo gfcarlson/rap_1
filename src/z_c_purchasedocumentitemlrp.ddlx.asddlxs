@@ -133,13 +133,13 @@ annotate view Z_C_PurchaseDocumentItemLrp with
   VendorType;
 
 
-  @UI.dataPoint: {
+/*  @UI.dataPoint: {
     visualization: #RATING,
     targetValue: 5,
     title: 'Vendor Rating'
   }
   @UI.lineItem: [{ importance: #MEDIUM, position: 80, type: #AS_DATAPOINT }]
-  VendorRating;
+  VendorRating;*/
 
   @EndUserText.label: 'Currency'
   Currency;

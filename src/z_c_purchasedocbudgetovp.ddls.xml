@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DDLS>
-    <DDLNAME>Z_C_PURCHDOCBUDGETOVP_GFC</DDLNAME>
+    <DDLNAME>Z_C_PURCHASEDOCBUDGETOVP</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
-    <DDTEXT>Purchase Doc Budget OVP</DDTEXT>
+    <DDTEXT>OVP card for Overall Budget</DDTEXT>
     <SOURCE_TYPE>V</SOURCE_TYPE>
    </DDLS>
   </asx:values>

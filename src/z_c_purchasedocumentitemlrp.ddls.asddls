@@ -35,9 +35,9 @@ define view entity Z_C_PurchaseDocumentItemLrp
       @EndUserText.label: 'Image'
       @Consumption.filter.hidden: true
       PurchaseDocumentItemImageURL,
-      @ObjectModel.virtualElement: true
+/*      @ObjectModel.virtualElement: true
       @ObjectModel.virtualElementCalculatedBy: 'ABAP:ZCL_VENDOR_RATING_CALC_EXIT'
-      virtual VendorRating :abap.int1 ( 0  ),     
+      virtual VendorRating :abap.int1 ( 0  ),  */   
       @EndUserText.label: 'Created at'
       crea_date_time,
       @EndUserText.label: 'Created by'
@@ -52,5 +52,7 @@ define view entity Z_C_PurchaseDocumentItemLrp
       _VendorType
 
 }
+
+
 
 
