@@ -5,7 +5,7 @@
 @VDM.viewType: #CONSUMPTION
 
 define root view entity Z_C_PurchaseDocumentLrp
-  as projection on Z_I_PurchaseDocument_U
+  as projection on Z_I_PurchaseDocumenttp
 
 {
       @EndUserText.label: 'Purchase Document'
@@ -13,10 +13,10 @@ define root view entity Z_C_PurchaseDocumentLrp
   key PurchaseDocument,
       @EndUserText.label: 'Overall Price'
       OverallPrice,
- //     @EndUserText.label: 'Approval Required'
+     @EndUserText.label: 'Approval Required'
 //      @ObjectModel.foreignKey.association: '_IsApprovalRequired'
 //      @Consumption.valueHelpDefinition: [{entity:{name:'I_Indicator' , element: 'IndicatorValue'}}]
-//      IsApprovalRequired,
+      IsApprovalRequired,
       OverallPriceCriticality,
       @EndUserText.label: 'Status'
       @Consumption.valueHelpDefinition: [{entity:{name:'Z_C_StatusVH' , element: 'Status'}}]

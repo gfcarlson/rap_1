@@ -1,13 +1,5 @@
-class ZBP_I_PURCHASEDOCUMENTTP definition
-  public
-  create private .
-
-public section.
-protected section.
-private section.
+CLASS zbp_i_purchasedocumenttp DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF z_i_purchasedocumenttp.
 ENDCLASS.
 
-
-
-CLASS ZBP_I_PURCHASEDOCUMENTTP IMPLEMENTATION.
+CLASS zbp_i_purchasedocumenttp IMPLEMENTATION.
 ENDCLASS.

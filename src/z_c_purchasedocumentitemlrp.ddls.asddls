@@ -5,7 +5,7 @@
 @VDM.viewType: #CONSUMPTION
 
 define view entity Z_C_PurchaseDocumentItemLrp
-   as projection on Z_I_PurchaseDocumentItem_U
+   as projection on Z_I_PurchaseDocumentItemtp
 {
       @EndUserText.label: 'Purchase Document Item'
       @Search: {defaultSearchElement: true, ranking: #HIGH, fuzzinessThreshold: 0.8}

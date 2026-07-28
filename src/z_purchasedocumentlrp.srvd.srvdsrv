@@ -1,0 +1,17 @@
+@EndUserText.label: 'Purchase Document LRP'
+define service Z_purchasedocumentlrp {
+  expose Z_C_PurchaseDocumentLrp      as PurchaseDocument;
+  expose Z_C_PurchaseDocumentItemLrp  as PurchaseDocumentItem;
+  expose I_Currency                   as Currency;
+  expose I_UnitOfMeasure              as QuantityUnitOfMeasure;
+  expose Z_I_VendorType               as VendorType;
+  expose Z_C_StatusVH                 as StatusVH;
+  expose Z_C_VendorTypeVH             as VendorTypeVH;
+  expose Z_C_PriorityVH               as priorityvh;
+  expose Z_I_PurchaseDocumentPriority as Priority;
+  expose Z_I_PurchaseDocumentStatus   as Status;
+  expose Z_I_PurchDocOverallPrice     as PurchDocOverallPrice;
+  expose Z_I_PurchaseDocument         as PurchaseDocumentBase;
+  expose Z_I_PurchaseDocumentItem     as PurchaseDocumentItemBase;
+  expose Z_I_PurchasingOrganization   as PurchasingOrganization;
+}

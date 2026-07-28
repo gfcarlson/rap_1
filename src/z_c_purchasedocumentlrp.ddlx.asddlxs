@@ -84,14 +84,15 @@ annotate view Z_C_PurchaseDocumentLrp with
      ],
      fieldGroup: [{ qualifier: 'PurchasingDocumentFieldGroup', position: 10, importance: #HIGH }]
   }
- @UI.lineItem: [{ importance: #HIGH, position: 20 }, 
-    { type: #FOR_ACTION, dataAction: 'Approve', position: 10, label: 'Approve'  },
-    { type: #FOR_ACTION, dataAction: 'Reject',  position: 20, label: 'Close' }]
-    @UI: {    
+// @UI.lineItem: [{ importance: #HIGH, position: 20 }, 
+//    { type: #FOR_ACTION, dataAction: 'Approve_Order', position: 10, label: 'LineItem Approve'  },
+//    { type: #FOR_ACTION, dataAction: 'Reject_Order',  position: 20, label: 'LineItem Reject' }]
+   @UI: {    
     identification: [
-    { type: #FOR_ACTION, dataAction: 'Approve', position: 10, importance: #HIGH, label: 'Approve' },
-    { type: #FOR_ACTION, dataAction: 'Reject',  position: 20, importance: #HIGH, label: 'Close' }] 
+    { type: #FOR_ACTION, dataAction: 'Approve_Order', position: 10, importance: #HIGH, label: 'Ident Approve' },
+    { type: #FOR_ACTION, dataAction: 'Reject_Order',  position: 20, importance: #HIGH, label: 'Ident Reject' }] 
     }
+   
   PurchaseDocument;
   @UI: {
     fieldGroup: [{ qualifier: 'PurchasingDocumentFieldGroup', position: 20, importance: #HIGH }]
@@ -150,12 +151,12 @@ annotate view Z_C_PurchaseDocumentLrp with
   PurchasingOrganization;
 
 
-/*  @UI:  {
+  @UI:  {
     lineItem: [{ importance: #HIGH, position: 80, criticality: 'OverallPriceCriticality', criticalityRepresentation: #WITH_ICON, value: 'IsApprovalRequired' }],
     textArrangement: #TEXT_ONLY,
     dataPoint: { title: 'Is Approval Required', criticality: 'OverallPriceCriticality' } }
   IsApprovalRequired;
-*/
+
 
   @UI: {
     lineItem: [{ importance: #MEDIUM, position: 90 }],

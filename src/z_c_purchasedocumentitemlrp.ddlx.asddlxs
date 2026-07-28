@@ -41,12 +41,12 @@ annotate view Z_C_PurchaseDocumentItemLrp with
            type:       #DATAPOINT_REFERENCE,
            targetQualifier: 'OverallItemPrice'
           },
-          {
-           id:         'VendorRatingDataPointFacet',
+ /*         {
+          id:         'VendorRatingDataPointFacet',
            purpose:    #HEADER,
            type:       #DATAPOINT_REFERENCE,
            targetQualifier: 'VendorRating'
-          },
+          },*/
        {
           label: 'Purchase Document',
           type: #COLLECTION,

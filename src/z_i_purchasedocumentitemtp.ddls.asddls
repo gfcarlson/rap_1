@@ -1,11 +1,11 @@
-@AbapCatalog.sqlViewName: 'ZIPURCHDOCITEMTP'
+//@AbapCatalog.sqlViewName: 'ZIPURCHDOCITEMTP'
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Purchase Document Item'
 //@AbapCatalog.preserveKey: true
 //@ObjectModel.writeActivePersistence: 'ZPURCHDOCITEM'
 @VDM.viewType: #COMPOSITE
-
-define view Z_I_PurchaseDocumentItemTP
+@Metadata.allowExtensions:true
+define view entity Z_I_PurchaseDocumentItemTP
   as select from Z_I_PurchaseDocumentItem
   association to parent Z_I_PurchaseDocumentTP as _PurchaseDocument on $projection.PurchaseDocument = _PurchaseDocument.PurchaseDocument
 {

@@ -4,7 +4,7 @@
 //@AbapCatalog.preserveKey: true
 @VDM.viewType: #BASIC
 
-@Analytics.dataCategory: #DIMENSION
+//@Analytics.dataCategory: #DIMENSION
 @ObjectModel.representativeKey: 'PurchaseDocument'
 @ObjectModel.semanticKey: ['PurchaseDocument']
 

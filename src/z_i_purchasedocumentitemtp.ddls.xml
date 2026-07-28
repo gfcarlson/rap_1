@@ -6,7 +6,7 @@
     <DDLNAME>Z_I_PURCHASEDOCUMENTITEMTP</DDLNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <DDTEXT>Purchase Document Item</DDTEXT>
-    <SOURCE_TYPE>V</SOURCE_TYPE>
+    <SOURCE_TYPE>W</SOURCE_TYPE>
    </DDLS>
   </asx:values>
  </asx:abap>

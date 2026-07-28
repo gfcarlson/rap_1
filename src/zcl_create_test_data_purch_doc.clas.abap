@@ -48,23 +48,23 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
     GET TIME STAMP FIELD lv_time_stamp_utc.
 
     lt_purch_doc_items = VALUE #(
-        ( purchasedocument = '1' purchasedocumentitem = '1' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Tires' price = '300.00' currency = 'EUR' quantity = '4' quantityunit = 'PC'
+        ( purchasedocument = '1' purchasedocumentitem = '1' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Tires' price = '300.00' currency = 'EUR' quantity = '4' quantityunit = 'EA'
         vendor = 'Miller Cars' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'John Doe' purchasedocumentitemimageurl = './images/car.jpg'  )
-        ( purchasedocument = '1' purchasedocumentitem = '2' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car' price = '40000' currency = 'EUR' quantity = '1' quantityunit = 'PC'
+        ( purchasedocument = '1' purchasedocumentitem = '2' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car' price = '40000' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'Miller Cars' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'John Doe' purchasedocumentitemimageurl = './images/car.jpg'  )
 
-        ( purchasedocument = '2' purchasedocumentitem = '1' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Screen' price = '200.00' currency = 'EUR' quantity = '2' quantityunit = 'PC'
+        ( purchasedocument = '2' purchasedocumentitem = '1' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Screen' price = '200.00' currency = 'EUR' quantity = '2' quantityunit = 'EA'
         vendor = 'Doe Computers' vendortype = 'Q' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May' purchasedocumentitemimageurl = './images/screen.jpg' )
-        ( purchasedocument = '2' purchasedocumentitem = '2' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Keyboard' price = '100.00' currency = 'EUR' quantity = '1' quantityunit = 'PC'
+        ( purchasedocument = '2' purchasedocumentitem = '2' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Keyboard' price = '100.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
  vendor = 'Doe Computers' vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May' purchasedocumentitemimageurl = './images/keyboard.jpg'     )
-        ( purchasedocument = '2' purchasedocumentitem = '3' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Mouse' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'PC' vendor = 'Doe Computers'
+        ( purchasedocument = '2' purchasedocumentitem = '3' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Mouse' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA' vendor = 'Doe Computers'
  vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May'  purchasedocumentitemimageurl = '../images/mouse.jpg'  )
-        ( purchasedocument = '2' purchasedocumentitem = '4' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Computer' price = '500.00' currency = 'EUR' quantity = '1' quantityunit = 'PC'
+        ( purchasedocument = '2' purchasedocumentitem = '4' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Computer' price = '500.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
  vendor = 'Doe Computers' vendortype = 'P' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May'  purchasedocumentitemimageurl = './images/laptop.jpg'  )
 
-        ( purchasedocument = '3' purchasedocumentitem = '1' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - Fiori' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'PC'
+        ( purchasedocument = '3' purchasedocumentitem = '1' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - Fiori' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'SAP Press' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith'  purchasedocumentitemimageurl = './images/book.jpg'  )
-        ( purchasedocument = '3' purchasedocumentitem = '2' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - HANA' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'PC'
+        ( purchasedocument = '3' purchasedocumentitem = '2' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - HANA' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'SAP Press' vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith' purchasedocumentitemimageurl = './images/book.jpg'   )
          ).
 
@@ -123,22 +123,25 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
 
 
   METHOD clean.
-    DELETE FROM zpurchdocument.
+    DELETE FROM zpurchdoc.
     DELETE FROM zpurchdocitem.
     DELETE FROM zpurchvendortyp.
     DELETE FROM zpurchdocprio.
     DELETE FROM zpurchdocstatus.
     DELETE FROM zpurchorg.
+    DELETE FROM zpurchdocitem_d.
+    DELETE FROM zpurchdoc_d.
   ENDMETHOD.
 
   METHOD if_oo_adt_classrun~main.
     clean( ).
-    create_purchase_documents( ).
+       create_purchase_documents( ).
     create_purchase_document_items( ).
     create_purch_doc_vendors( ).
     create_purch_doc_priorities( ).
     create_purch_doc_status( ).
     create_purch_organization( ).
+
 
     out->write(
       EXPORTING

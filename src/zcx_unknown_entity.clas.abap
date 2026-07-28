@@ -1,13 +1,15 @@
-class ZCX_UNKNOWN_ENTITY definition
-  public
-  create private .
+CLASS zcx_unknown_entity DEFINITION
+  PUBLIC
+  INHERITING FROM cx_sadl_exit
+  FINAL
+  CREATE PUBLIC .
 
-public section.
-protected section.
-private section.
+  PUBLIC SECTION.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
 ENDCLASS.
 
 
 
-CLASS ZCX_UNKNOWN_ENTITY IMPLEMENTATION.
+CLASS zcx_unknown_entity IMPLEMENTATION.
 ENDCLASS.
