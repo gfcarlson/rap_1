@@ -3,7 +3,7 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <DD02V>
-    <TABNAME>ZPURCHDOC_D</TABNAME>
+    <TABNAME>Z_PDoc_D</TABNAME>
     <DDLANGUAGE>E</DDLANGUAGE>
     <TABCLASS>TRANSP</TABCLASS>
     <CLIDEP>X</CLIDEP>
@@ -15,7 +15,7 @@
     <EXCLASS>4</EXCLASS>
    </DD02V>
    <DD09L>
-    <TABNAME>ZPURCHDOC_D</TABNAME>
+    <TABNAME>Z_PDoc_D</TABNAME>
     <AS4LOCAL>A</AS4LOCAL>
     <TABKAT>0</TABKAT>
     <TABART>APPL0</TABART>
@@ -168,7 +168,7 @@
    </DD03P_TABLE>
    <TABL_EXTRAS>
     <TDDAT>
-     <TABNAME>ZPURCHDOC_D</TABNAME>
+     <TABNAME>Z_PDoc_D</TABNAME>
      <CCLASS>CUS_DEV_SUP_DA</CCLASS>
     </TDDAT>
    </TABL_EXTRAS>

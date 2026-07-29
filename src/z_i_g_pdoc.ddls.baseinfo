@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZPURCHDOC"
+"Z_PDoc"
 ],
 "ASSOCIATED":
 [

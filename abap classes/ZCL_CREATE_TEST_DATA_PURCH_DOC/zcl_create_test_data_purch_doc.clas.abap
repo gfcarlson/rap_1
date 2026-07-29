@@ -24,7 +24,7 @@ ENDCLASS.
 CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
 
   METHOD create_purchase_documents.
-    DATA: lt_purch_docs TYPE STANDARD TABLE OF zpurchdoc.
+    DATA: lt_purch_docs TYPE STANDARD TABLE OF z_pdoc.
 
     DATA lv_time_stamp_utc TYPE timestampl.
     GET TIME STAMP FIELD lv_time_stamp_utc.
@@ -37,7 +37,7 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
     ( purchasedocument = '3' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'Book Purchase' status = '1'  priority = '3'
     lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith' purchasingorganization = 'ORG3' purchasedocumentimageurl = './images/book.jpg'  ) ).
 
-    INSERT zpurchdoc FROM TABLE @lt_purch_docs.
+    INSERT z_pdoc FROM TABLE @lt_purch_docs.
   ENDMETHOD.
 
 
@@ -123,14 +123,14 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
 
 
   METHOD clean.
-    DELETE FROM zpurchdoc.
+    DELETE FROM z_pdoc.
     DELETE FROM zpurchdocitem.
     DELETE FROM zpurchvendortyp.
     DELETE FROM zpurchdocprio.
     DELETE FROM zpurchdocstatus.
     DELETE FROM zpurchorg.
     DELETE FROM zpurchdocitem_d.
-    DELETE FROM zpurchdoc_d.
+    DELETE FROM z_pdoc_d.
   ENDMETHOD.
 
   METHOD if_oo_adt_classrun~main.
