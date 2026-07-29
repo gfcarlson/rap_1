@@ -8,17 +8,17 @@ Generated from the `src` directory. The list groups the main deliverable objects
 - YI_PO_ITEM — yi_po_item.ddls.asddls
 - YI_POH_HEAD — yi_poh_head.ddls.asddls
 - Z_C_PriorityVH — z_c_priorityvh.ddls.asddls
-- Z_C_PurchaseDocumentItemLrp — z_c_purchasedocumentitemlrp.ddls.asddls
-- Z_C_PurchaseDocumentLrp — z_c_purchasedocumentlrp.ddls.asddls
+- ZC_G_PItem — zc_g_pitem.ddls.asddls
+- ZC_G_PDoc_RV — zc_g_pdoc_rv.ddls.asddls
 - Z_C_StatusVH — z_c_statusvh.ddls.asddls
 - Z_C_VendorTypeVH — z_c_vendortypevh.ddls.asddls
 - Z_I_PurchaseDocAprovalStat — z_i_purchasedocaprovalstat.ddls.asddls
 - ZI_G_PDoc — z_i_g_pdoc.ddls.asddls
-- Z_I_PurchaseDocumentItem — z_i_purchasedocumentitem.ddls.asddls
-- Z_I_PurchaseDocumentItemTP — z_i_purchasedocumentitemtp.ddls.asddls
+- ZI_G_PItem — zi_g_pitem.ddls.asddls
+- ZI_G_PItem_COMP — zi_g_pitem_comp.ddls.asddls
 - Z_I_PurchaseDocumentPriority — z_i_purchasedocumentpriority.ddls.asddls
 - Z_I_PurchaseDocumentStatus — z_i_purchasedocumentstatus.ddls.asddls
-- Z_I_PurchaseDocumentTP — z_i_purchasedocumenttp.ddls.asddls
+- ZI_G_PDoc_RV_COMP — zi_g_pdoc_rv_comp.ddls.asddls
 - Z_I_PurchasingOrganization — z_i_purchasingorganization.ddls.asddls
 - Z_I_PurchDocOverallPrice — z_i_purchdocoverallprice.ddls.asddls
 - Z_I_VendorType — z_i_vendortype.ddls.asddls
@@ -26,8 +26,8 @@ Generated from the `src` directory. The list groups the main deliverable objects
 ## Behavior Definitions
 - YC_POH_HEAD — yc_poh_head.bdef.asbdef
 - YI_POH_HEAD — yi_poh_head.bdef.asbdef
-- Z_C_PurchaseDocumentLrp — z_c_purchasedocumentlrp.bdef.asbdef
-- Z_I_PurchaseDocumentTP — z_i_purchasedocumenttp.bdef.asbdef
+- ZC_G_PDoc_RV — zc_g_pdoc_rv.bdef.asbdef
+- ZI_G_PDoc_RV_COMP — zi_g_pdoc_rv_comp.bdef.asbdef
 
 ## Service Definitions
 - YC_PO_SRV — yc_po_srv.srvd.srvdsrv
@@ -47,8 +47,8 @@ Generated from the `src` directory. The list groups the main deliverable objects
 ## Metadata Extensions
 - YC_PO_ITEM — yc_po_item.ddlx.asddlxs
 - YC_POH_HEAD — yc_poh_head.ddlx.asddlxs
-- Z_C_PURCHASEDOCUMENTITEMLRP — z_c_purchasedocumentitemlrp.ddlx.asddlxs
-- Z_C_PURCHASEDOCUMENTLRP — z_c_purchasedocumentlrp.ddlx.asddlxs
+- ZC_G_PITEM — zc_g_pitem.ddlx.asddlxs
+- ZC_G_PDOC_RV — zc_g_pdoc_rv.ddlx.asddlxs
 
 ## DCL Roles
 - ZI_G_PDOC — z_i_g_pdoc.dcls.asdcls

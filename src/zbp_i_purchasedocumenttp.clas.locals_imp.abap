@@ -1,9 +1,6 @@
 CLASS lhc_PurchaseDocument DEFINITION INHERITING FROM cl_abap_behavior_handler.
   PRIVATE SECTION.
 
-    METHODS earlynumbering_create FOR NUMBERING
-      IMPORTING entities FOR CREATE PurchaseDocument.
-
     METHODS Approve_Order FOR MODIFY
       IMPORTING keys FOR ACTION PurchaseDocument~Approve_Order RESULT result.
 
@@ -26,16 +23,6 @@ CLASS lhc_PurchaseDocument IMPLEMENTATION.
 
 
 
-METHOD earlynumbering_create.
-
-
-
-ENDMETHOD.
-
-
-
-
-
   METHOD Approve_Order.
     " NOTE: table name assumed as ZPURCHDOC to match the .bdef's
     " "persistent table zpurchdoc" clause. Please confirm in SE11 —
@@ -43,7 +30,7 @@ ENDMETHOD.
     " match the behavior definition and was the root cause of the
     " "component not found" errors.
 
-    MODIFY ENTITIES OF Z_I_PurchaseDocumentTP IN LOCAL MODE
+    MODIFY ENTITIES OF ZI_G_PDoc_RV_COMP IN LOCAL MODE
       ENTITY PurchaseDocument
         UPDATE FIELDS ( Status )
         WITH VALUE #( FOR key IN keys ( PurchaseDocument = key-PurchaseDocument
@@ -61,7 +48,7 @@ ENDMETHOD.
   METHOD Reject_Order.
     " NOTE: same table-name assumption as Approve_Order above — verify ZPURCHDOC.
 
-    MODIFY ENTITIES OF Z_I_PurchaseDocumentTP IN LOCAL MODE
+    MODIFY ENTITIES OF ZI_G_PDoc_RV_COMP IN LOCAL MODE
       ENTITY PurchaseDocument
         UPDATE FIELDS ( Status )
         WITH VALUE #( FOR key IN keys ( PurchaseDocument = key-PurchaseDocument

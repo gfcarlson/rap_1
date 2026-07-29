@@ -1,7 +1,7 @@
 @EndUserText.label: 'Purchase Document LRP'
 define service Z_purchasedocumentlrp {
-  expose Z_C_PurchaseDocumentLrp      as PurchaseDocument;
-  expose Z_C_PurchaseDocumentItemLrp  as PurchaseDocumentItem;
+  expose ZC_G_PDoc_RV      as PurchaseDocument;
+  expose ZC_G_PItem  as PurchaseDocumentItem;
   expose I_Currency                   as Currency;
   expose I_UnitOfMeasure              as QuantityUnitOfMeasure;
   expose Z_I_VendorType               as VendorType;
@@ -12,6 +12,6 @@ define service Z_purchasedocumentlrp {
   expose Z_I_PurchaseDocumentStatus   as Status;
   expose Z_I_PurchDocOverallPrice     as PurchDocOverallPrice;
   expose ZI_G_PDoc         as PurchaseDocumentBase;
-  expose Z_I_PurchaseDocumentItem     as PurchaseDocumentItemBase;
+  expose ZI_G_PItem     as PurchaseDocumentItemBase;
   expose Z_I_PurchasingOrganization   as PurchasingOrganization;
 }

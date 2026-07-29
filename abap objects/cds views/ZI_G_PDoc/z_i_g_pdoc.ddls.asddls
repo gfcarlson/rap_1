@@ -11,7 +11,7 @@
 
 define view ZI_G_PDoc
   as select from zpurchdoc
-  association [0..*] to Z_I_PurchaseDocumentItem     as _PurchaseDocumentItem   on $projection.PurchaseDocument = _PurchaseDocumentItem.PurchaseDocument
+  association [0..*] to ZI_G_PItem     as _PurchaseDocumentItem   on $projection.PurchaseDocument = _PurchaseDocumentItem.PurchaseDocument
   association [0..1] to Z_I_PurchaseDocumentPriority as _Priority               on $projection.Priority = _Priority.Priority
   association [0..1] to Z_I_PurchaseDocumentStatus   as _Status                 on $projection.Status = _Status.Status
   association [0..1] to Z_I_PurchasingOrganization   as _PurchasingOrganization on $projection.PurchasingOrganization = _PurchasingOrganization.PurchasingOrganization

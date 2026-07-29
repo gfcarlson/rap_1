@@ -1,0 +1,29 @@
+projection;
+strict ( 2 );
+use draft;
+
+define behavior for ZC_G_PDoc_RV alias PurchaseDocument
+{
+  use create;
+  use update;
+  use delete;
+
+  use action Approve_Order;
+  use action Reject_Order;
+
+  use action Edit;
+  use action Activate;
+  use action Discard;
+  use action Resume;
+  use action Prepare;
+
+  use association _PurchaseDocumentItem { create; with draft; }
+}
+
+define behavior for ZC_G_PItem alias PurchaseDocumentItem
+{
+  use update;
+  use delete;
+
+  use association _PurchaseDocument  { with draft; }
+}

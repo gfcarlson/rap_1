@@ -25,16 +25,23 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
 
   METHOD create_purchase_documents.
     DATA: lt_purch_docs TYPE STANDARD TABLE OF zpurchdoc.
+    DATA: lv_doc_1 TYPE sysuuid_x16,
+          lv_doc_2 TYPE sysuuid_x16,
+          lv_doc_3 TYPE sysuuid_x16.
 
     DATA lv_time_stamp_utc TYPE timestampl.
     GET TIME STAMP FIELD lv_time_stamp_utc.
 
+    lv_doc_1 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE01' ).
+    lv_doc_2 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE02' ).
+    lv_doc_3 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE03' ).
+
     lt_purch_docs = VALUE #(
-    ( purchasedocument = '1' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car Purchase' status = '1' priority = '1'
+    ( purchasedocument = lv_doc_1 crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car Purchase' status = '1' priority = '1'
     lchg_date_time = lv_time_stamp_utc lchg_uname = 'John Doe' purchasingorganization = 'ORG1' purchasedocumentimageurl = './images/car.jpg'  )
-    ( purchasedocument = '2' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Hardware Purchase' status = '1' priority = '2'
+    ( purchasedocument = lv_doc_2 crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Hardware Purchase' status = '1' priority = '2'
     lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May' purchasingorganization = 'ORG2' purchasedocumentimageurl = './images/laptop.jpg'   )
-    ( purchasedocument = '3' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'Book Purchase' status = '1'  priority = '3'
+    ( purchasedocument = lv_doc_3 crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'Book Purchase' status = '1'  priority = '3'
     lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith' purchasingorganization = 'ORG3' purchasedocumentimageurl = './images/book.jpg'  ) ).
 
     INSERT zpurchdoc FROM TABLE @lt_purch_docs.
@@ -43,28 +50,35 @@ CLASS zcl_create_test_data_purch_doc IMPLEMENTATION.
 
   METHOD create_purchase_document_items.
     DATA: lt_purch_doc_items TYPE STANDARD TABLE OF zpurchdocitem.
+      DATA: lv_doc_1 TYPE sysuuid_x16,
+       lv_doc_2 TYPE sysuuid_x16,
+       lv_doc_3 TYPE sysuuid_x16.
 
     DATA lv_time_stamp_utc TYPE timestampl.
     GET TIME STAMP FIELD lv_time_stamp_utc.
 
+      lv_doc_1 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE01' ).
+      lv_doc_2 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE02' ).
+      lv_doc_3 = CONV sysuuid_x16( '00112233445566778899AABBCCDDEE03' ).
+
     lt_purch_doc_items = VALUE #(
-        ( purchasedocument = '1' purchasedocumentitem = '1' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Tires' price = '300.00' currency = 'EUR' quantity = '4' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_1 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE01' ) crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Tires' price = '300.00' currency = 'EUR' quantity = '4' quantityunit = 'EA'
         vendor = 'Miller Cars' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'John Doe' purchasedocumentitemimageurl = './images/car.jpg'  )
-        ( purchasedocument = '1' purchasedocumentitem = '2' crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car' price = '40000' currency = 'EUR' quantity = '1' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_1 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE02' ) crea_uname = 'John Doe' crea_date_time = lv_time_stamp_utc description = 'Company Car' price = '40000' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'Miller Cars' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'John Doe' purchasedocumentitemimageurl = './images/car.jpg'  )
 
-        ( purchasedocument = '2' purchasedocumentitem = '1' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Screen' price = '200.00' currency = 'EUR' quantity = '2' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_2 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE03' ) crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Screen' price = '200.00' currency = 'EUR' quantity = '2' quantityunit = 'EA'
         vendor = 'Doe Computers' vendortype = 'Q' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May' purchasedocumentitemimageurl = './images/screen.jpg' )
-        ( purchasedocument = '2' purchasedocumentitem = '2' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Keyboard' price = '100.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_2 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE04' ) crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Keyboard' price = '100.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
  vendor = 'Doe Computers' vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May' purchasedocumentitemimageurl = './images/keyboard.jpg'     )
-        ( purchasedocument = '2' purchasedocumentitem = '3' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Mouse' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA' vendor = 'Doe Computers'
+     ( purchasedocument = lv_doc_2 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE05' ) crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Mouse' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA' vendor = 'Doe Computers'
  vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May'  purchasedocumentitemimageurl = '../images/mouse.jpg'  )
-        ( purchasedocument = '2' purchasedocumentitem = '4' crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Computer' price = '500.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_2 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE06' ) crea_uname = 'Marissa May' crea_date_time = lv_time_stamp_utc description = 'Computer' price = '500.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
  vendor = 'Doe Computers' vendortype = 'P' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Marissa May'  purchasedocumentitemimageurl = './images/laptop.jpg'  )
 
-        ( purchasedocument = '3' purchasedocumentitem = '1' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - Fiori' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_3 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE07' ) crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - Fiori' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'SAP Press' vendortype = 'E' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith'  purchasedocumentitemimageurl = './images/book.jpg'  )
-        ( purchasedocument = '3' purchasedocumentitem = '2' crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - HANA' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
+     ( purchasedocument = lv_doc_3 purchasedocumentitem = CONV sysuuid_x16( '10112233445566778899AABBCCDDEE08' ) crea_uname = 'Mike Smith' crea_date_time = lv_time_stamp_utc description = 'SAP Press - HANA' price = '50.00' currency = 'EUR' quantity = '1' quantityunit = 'EA'
         vendor = 'SAP Press' vendortype = 'I' lchg_date_time = lv_time_stamp_utc lchg_uname = 'Mike Smith' purchasedocumentitemimageurl = './images/book.jpg'   )
          ).
 

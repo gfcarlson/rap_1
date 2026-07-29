@@ -1,0 +1,85 @@
+managed implementation in class zbp_i_purchasedocumenttp unique;
+strict ( 2 );
+with draft;
+
+define behavior for ZI_G_PDoc_RV_COMP alias PurchaseDocument
+persistent table zpurchdoc
+draft table zpurchdoc_d
+
+lock master total etag lchg_date_time
+authorization master ( global )
+etag master lchg_date_time
+
+early numbering
+
+{
+  create;
+  update;
+  delete;
+
+  association _PurchaseDocumentItem { create; with draft; }
+
+
+
+  action Approve_Order result [1] $self;
+  action Reject_Order  result [1] $self;
+
+  draft action Edit;
+  draft action Activate;
+  draft action Discard;
+  draft action Resume;
+  draft determine action Prepare;
+
+
+
+  field ( readonly ) OverallPrice, OverallPriceCriticality, IsApprovalRequired, Currency;
+
+  field ( readonly )   PurchaseDocument, crea_date_time, lchg_date_time, lchg_uname;
+  field ( mandatory )  Description, PurchasingOrganization;
+
+  mapping for zpurchdoc
+    {
+      PurchaseDocument       = purchasedocument;
+      Description             = description;
+      Status                  = status;
+      Priority                = priority;
+      PurchasingOrganization  = purchasingorganization;
+      PurchaseDocumentImageURL = purchasedocumentimageurl;
+      crea_date_time          = crea_date_time;
+      lchg_date_time           = lchg_date_time;
+      lchg_uname               = lchg_uname;
+    }
+}
+
+define behavior for ZI_G_PItem_COMP alias PurchaseDocumentItem
+persistent table zpurchdocitem
+draft table zpurchdocitem_d
+lock dependent by _PurchaseDocument
+authorization dependent by _PurchaseDocument
+{
+  update;
+  delete;
+
+  field ( readonly )  PurchaseDocumentItem, PurchaseDocument, OverallItemPrice;
+  field ( mandatory ) Price, Quantity, QuantityUnit;
+
+  association _PurchaseDocument;
+
+  mapping for zpurchdocitem
+    {
+      PurchaseDocumentItem          = purchasedocumentitem;
+      PurchaseDocument              = purchasedocument;
+      Description                   = description;
+      Vendor                        = vendor;
+      VendorType                    = vendortype;
+      Price                         = price;
+      Currency                      = currency;
+      Quantity                      = quantity;
+      QuantityUnit                  = quantityunit;
+      PurchaseDocumentItemImageURL  = purchasedocumentitemimageurl;
+      crea_date_time                = crea_date_time;
+      crea_uname                    = crea_uname;
+      lchg_date_time                = lchg_date_time;
+      lchg_uname                    = lchg_uname;
+    }
+}
