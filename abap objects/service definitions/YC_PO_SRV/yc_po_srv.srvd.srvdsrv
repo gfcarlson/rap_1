@@ -1,0 +1,5 @@
+@EndUserText.label: 'Purchase Service'
+define service YC_PO_SRV {
+  expose YC_POH_HEAD as PoHead;
+  expose YC_PO_ITEM  as PoItem;
+}

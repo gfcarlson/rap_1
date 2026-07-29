@@ -11,7 +11,7 @@ define service Z_purchasedocumentlrp {
   expose Z_I_PurchaseDocumentPriority as Priority;
   expose Z_I_PurchaseDocumentStatus   as Status;
   expose Z_I_PurchDocOverallPrice     as PurchDocOverallPrice;
-  expose Z_I_PurchaseDocument         as PurchaseDocumentBase;
+  expose ZI_G_PDoc         as PurchaseDocumentBase;
   expose Z_I_PurchaseDocumentItem     as PurchaseDocumentItemBase;
   expose Z_I_PurchasingOrganization   as PurchasingOrganization;
 }

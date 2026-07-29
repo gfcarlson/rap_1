@@ -1,0 +1,13 @@
+@EndUserText.label: 'Role for ZI_G_PDoc' 
+@MappingRole: true 
+define role ZI_G_PDoc { 
+    grant select 
+        on ZI_G_PDoc 
+        where 
+       ( PurchasingOrganization ) =
+        aspect pfcg_auth( 
+            ZPURCHORGA, // Authorization object 
+            ZPURCHORGA , // Matched auth. object field
+            ACTVT = '03' // Fixed auth. object field
+             ) ;                          
+}

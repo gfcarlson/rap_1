@@ -1,0 +1,63 @@
+unmanaged implementation in class zbp_i_poh_head unique;
+//strict ( 2 );
+
+define behavior for YI_POH_HEAD alias PO_HDR
+//late numbering
+lock master
+//authorization master ( instance )
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) PoNum;
+  field ( mandatory ) DocCat, CompCode, Org, Status, Vendor;
+  action (features : instance) change_status result [1] $self;
+  association _items { create; }
+  mapping for ytb_po_hdr
+    {
+      PoNum                = po_num;
+      DocCat               = doc_cat;
+      Type                 = type;
+      CompCode             = comp_code;
+      Org                  = org;
+      Vendor               = vendor;
+      Status               = status;
+      CreatedBy            = created_by;
+      CreateDateTime       = create_date_time;
+      ChangedBy            = changed_by;
+      ChangedDateTime      = changed_date_time;
+      ChangedLocalDateTime = changed_local_date_time;
+    }
+}
+
+define behavior for YI_PO_ITEM alias PO_ITM
+//late numbering
+lock dependent by _head
+//authorization dependent by _head
+//etag master <field_name>
+{
+  create;
+  update;
+  delete;
+  field ( readonly : update ) PoNum, PoItem;
+  field ( mandatory ) ItemText, Material, Uom, Plant, StorageLoc, Qty, ProductPrice, PriceUnit;
+  association _head;
+
+  mapping for ytb_po_itm
+    {
+      PoNum                = po_num;
+      PoItem               = po_item;
+      ItemText             = item_text;
+      Material             = material;
+      Uom                  = uom;
+      Plant                = plant;
+      StorageLoc           = storage_loc;
+      Qty                  = qty;
+      ProductPrice         = product_price;
+      PriceUnit            = price_unit;
+      ChangedBy            = changed_by;
+      ChangedDateTime      = changed_date_time;
+      ChangedLocalDateTime = changed_local_date_time;
+    }
+}

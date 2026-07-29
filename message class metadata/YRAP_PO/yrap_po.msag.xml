@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>YRAP_PO</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Purchase Document</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>PO Item &amp;1 Already exists</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>PO Item can&apos;t be empty</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>016</MSGNR>
+     <TEXT>PO does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>017</MSGNR>
+     <TEXT>Item does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>021</MSGNR>
+     <TEXT>Vendor does not exist</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>032</MSGNR>
+     <TEXT>PO is locked</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>YRAP_PO</ARBGB>
+     <MSGNR>046</MSGNR>
+     <TEXT>You are not Authorized</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

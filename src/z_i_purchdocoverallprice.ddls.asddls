@@ -6,7 +6,7 @@
 @ObjectModel.semanticKey: ['PurchaseDocument']
 
 define view Z_I_PurchDocOverallPrice
-  as select from Z_I_PurchaseDocument
+  as select from ZI_G_PDoc
   association [0..1] to I_Currency as _Currency on $projection.currency = _Currency.Currency
 {
 

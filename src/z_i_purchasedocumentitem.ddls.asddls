@@ -8,7 +8,7 @@
 
 define view Z_I_PurchaseDocumentItem
   as select from zpurchdocitem
-  association [1..1] to Z_I_PurchaseDocument as _PurchaseDocument      on $projection.PurchaseDocument = _PurchaseDocument.PurchaseDocument
+  association [1..1] to ZI_G_PDoc as _PurchaseDocument      on $projection.PurchaseDocument = _PurchaseDocument.PurchaseDocument
   association [0..1] to I_UnitOfMeasure      as _QuantityUnitOfMeasure on $projection.QuantityUnit = _QuantityUnitOfMeasure.UnitOfMeasure
   association [0..1] to Z_I_VendorType       as _VendorType            on $projection.VendorType = _VendorType.VendorType
   association [0..1] to I_Currency           as _Currency              on $projection.Currency = _Currency.Currency

@@ -1,0 +1,148 @@
+@Metadata.layer: #CUSTOMER
+@UI:{
+    headerInfo:{
+        typeName: 'Purchase Order',
+        typeNamePlural: 'Purchase Orders',
+        title: {
+            type:#STANDARD,
+            value: 'PoNum'
+        }
+    }
+ }
+annotate entity YC_POH_HEAD with
+{
+  @UI.facet: [
+  {
+     id: 'POHd',
+     purpose: #STANDARD,
+     position: 10,
+     type:#IDENTIFICATION_REFERENCE,
+     label: 'Purchase Order Header'
+   },
+//   {
+//     id: 'BasicInfo',
+//     purpose: #STANDARD,
+//     parentId: 'POHd',
+//     position: 10,
+//     targetQualifier: 'BasicGroup',
+//     type: #FIELDGROUP_REFERENCE,
+//     label: 'Basic Details'
+//   },
+//   {
+//     id: 'OrgInfo',
+//     purpose: #STANDARD,
+//     parentId: 'POHd',
+//     position: 20,
+//     targetQualifier: 'OrgGroup',
+//     type: #FIELDGROUP_REFERENCE,
+//     label: 'Organization Details'
+//   },
+//   {
+//     id: 'MoreInfo',
+//     purpose: #STANDARD,
+//     parentId: 'POHd',
+//     position: 30,
+//     targetQualifier: 'MoreGroup',
+//     type: #FIELDGROUP_REFERENCE,
+//     label: 'More Details'
+//   }
+//   ,
+   {
+     id: 'Header1',
+     purpose: #HEADER,
+     type:#DATAPOINT_REFERENCE,
+     targetQualifier: 'HD',
+     position: 10
+   },
+   {
+     id: 'POItem',
+     purpose: #STANDARD,
+     type:#LINEITEM_REFERENCE,
+     targetElement: '_items',
+     position: 20,
+     label: 'Purchase Item'
+   } 
+   ]
+
+  @UI.lineItem: [{ position: 10, label: 'Purchase Order'  }]
+  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 10, label: 'Purchase Order' }]
+  PoNum;
+
+  @UI.lineItem: [{ position: 20, label: 'Purchase Type'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 20, label: 'Purchase Type' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Type;
+
+  @UI.lineItem: [{ position: 30, label: 'Document Category'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 30, label: 'Document category' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  DocCat;
+
+  @UI.lineItem: [{ position: 40, label: 'Company code'  }]
+  @UI.selectionField: [{ position: 20 }]
+  @UI.identification: [{ position: 40, label: 'Company code' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  CompCode;
+
+  @UI.lineItem: [{ position: 50, label: 'Organization'  }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 50, label: 'Organization' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Org;
+
+  @UI.lineItem: [{ position: 60, label: 'Vendor'  }]
+  @UI.selectionField: [{ position: 30 }]
+  @UI.identification: [{ position: 60, label: 'Vendor' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Vendor;
+
+  @UI.lineItem: [{ position: 70, label: 'Plant'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 70, label: 'Plant' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Plants;
+  
+  @UI.lineItem: [{ position: 75, label: 'price'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 75, label: 'Price' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Price;
+  
+ 
+  
+ @UI.lineItem: [{ position: 80, label: 'Status'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 80, label: 'Status' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Status;
+
+@UI.lineItem: [{ position: 85, label: 'Discount'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 85, label: 'Discount' }]
+  @UI.dataPoint:{ qualifier: 'HD' } 
+  Discount;
+
+  @UI.lineItem: [{ position: 90, label: 'Created By'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 90, label: 'Created By' }]
+  CreatedBy;
+
+  @UI.lineItem: [{ position: 100, label: 'Create At'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position:100, label: 'Created At' }]
+  CreateDateTime;
+
+  @UI.lineItem: [{ position: 110, label: 'Changed By'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 110, label: 'Changed By' }]
+  ChangedBy;
+
+  @UI.lineItem: [{ position: 120, label: 'Changed At'  }]
+//  @UI.selectionField: [{ position: 10 }]
+  @UI.identification: [{ position: 120, label: 'Changed At' }]
+  ChangedDateTime;
+
+}
