@@ -3,7 +3,7 @@
 {
 "FROM":
 [
-"ZPURCHDOCITEM"
+"ZTG_PITEM"
 ],
 "ASSOCIATED":
 [

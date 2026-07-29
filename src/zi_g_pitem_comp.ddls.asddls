@@ -2,7 +2,7 @@
 @AccessControl.authorizationCheck: #NOT_REQUIRED
 @EndUserText.label: 'Purchase Document Item'
 //@AbapCatalog.preserveKey: true
-//@ObjectModel.writeActivePersistence: 'ZPURCHDOCITEM'
+//@ObjectModel.writeActivePersistence: 'ZTG_PITEM'
 @VDM.viewType: #COMPOSITE
 @Metadata.allowExtensions:true
 define view entity ZI_G_PItem_COMP

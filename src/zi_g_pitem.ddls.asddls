@@ -7,7 +7,7 @@
 //@Analytics: { dataCategory: #DIMENSION }
 
 define view ZI_G_PItem
-  as select from zpurchdocitem
+  as select from ztg_pitem
   association [1..1] to ZI_G_PDoc as _PurchaseDocument      on $projection.PurchaseDocument = _PurchaseDocument.PurchaseDocument
   association [0..1] to I_UnitOfMeasure      as _QuantityUnitOfMeasure on $projection.QuantityUnit = _QuantityUnitOfMeasure.UnitOfMeasure
   association [0..1] to Z_I_VendorType       as _VendorType            on $projection.VendorType = _VendorType.VendorType

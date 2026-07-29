@@ -52,8 +52,8 @@ early numbering
 }
 
 define behavior for ZI_G_PItem_COMP alias PurchaseDocumentItem
-persistent table zpurchdocitem
-draft table zpurchdocitem_d
+persistent table ztg_pitem
+draft table ztg_pitem_d
 lock dependent by _PurchaseDocument
 authorization dependent by _PurchaseDocument
 {
@@ -65,7 +65,7 @@ authorization dependent by _PurchaseDocument
 
   association _PurchaseDocument;
 
-  mapping for zpurchdocitem
+  mapping for ztg_pitem
     {
       PurchaseDocumentItem          = purchasedocumentitem;
       PurchaseDocument              = purchasedocument;

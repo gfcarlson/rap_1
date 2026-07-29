@@ -64,10 +64,10 @@ Generated from the `src` directory. The list groups the main deliverable objects
 ## Table Metadata
 - YTB_PO_HDR — ytb_po_hdr.tabl.xml
 - YTB_PO_ITM — ytb_po_itm.tabl.xml
-- Z_G_Pdoc — z_g_pdoc.tabl.xml
-- Z_G_Pdoc_D — z_g_pdoc_d.tabl.xml
-- ZPURCHDOCITEM — zpurchdocitem.tabl.xml
-- ZPURCHDOCITEM_D — zpurchdocitem_d.tabl.xml
+- ZTG_PDOC — ztg_pdoc.tabl.xml
+- ZTG_PDOC_D — ztg_pdoc_d.tabl.xml
+- ZTG_PITEM — ztg_pitem.tabl.xml
+- ZTG_PITEM_D — ztg_pitem_d.tabl.xml
 - ZPURCHDOCPRIO — zpurchdocprio.tabl.xml
 - ZPURCHDOCSTATUS — zpurchdocstatus.tabl.xml
 - ZPURCHORG — zpurchorg.tabl.xml
@@ -81,7 +81,7 @@ Generated from the `src` directory. The list groups the main deliverable objects
 
 ## Number Range Object Metadata
 - YRAP_PO — yrap_po.nrob.xml
-- Z_G_Pdoc — z_g_pdoc.nrob.xml
+- ZTG_PDOC — ztg_pdoc.nrob.xml
 
 ## Message Class Metadata
 - YRAP_PO — yrap_po.msag.xml

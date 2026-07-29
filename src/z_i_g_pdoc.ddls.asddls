@@ -10,7 +10,7 @@
 
 
 define view ZI_G_PDoc
-  as select from z_g_pdoc
+  as select from ztg_pdoc
   association [0..*] to ZI_G_PItem     as _PurchaseDocumentItem   on $projection.PurchaseDocument = _PurchaseDocumentItem.PurchaseDocument
   association [0..1] to Z_I_PurchaseDocumentPriority as _Priority               on $projection.Priority = _Priority.Priority
   association [0..1] to Z_I_PurchaseDocumentStatus   as _Status                 on $projection.Status = _Status.Status
