@@ -23,7 +23,7 @@ CLASS zcl_create_purchdoc_nr_range IMPLEMENTATION.
         tonumber = '9999999999'
         procind = 'I' )
         )
-         object = 'Z_PDoc'
+         object = 'Z_G_Pdoc'
          importing
          error = DATA(ld_error)
          error_inf = DATA(ls_error)

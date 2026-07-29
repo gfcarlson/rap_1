@@ -24,8 +24,8 @@ CLASS lhc_PurchaseDocument IMPLEMENTATION.
 
 
   METHOD Approve_Order.
-    " NOTE: table name assumed as Z_PDoc to match the .bdef's
-    " "persistent table z_pdoc" clause. Please confirm in SE11 —
+    " NOTE: table name assumed as Z_G_Pdoc to match the .bdef's
+    " "persistent table z_g_pdoc" clause. Please confirm in SE11 —
     " your original code referenced ZPURCHDOCUMENT, which does not
     " match the behavior definition and was the root cause of the
     " "component not found" errors.
@@ -46,7 +46,7 @@ CLASS lhc_PurchaseDocument IMPLEMENTATION.
   ENDMETHOD.
 
   METHOD Reject_Order.
-    " NOTE: same table-name assumption as Approve_Order above — verify Z_PDoc.
+    " NOTE: same table-name assumption as Approve_Order above — verify Z_G_Pdoc.
 
     MODIFY ENTITIES OF ZI_G_PDoc_RV_COMP IN LOCAL MODE
       ENTITY PurchaseDocument

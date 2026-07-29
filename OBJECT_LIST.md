@@ -58,14 +58,14 @@ Generated from the `src` directory. The list groups the main deliverable objects
 - ZPURCHDOC_NR — zpurchdoc_nr.doma.xml
 
 ## Data Element Metadata
-- Z_PDoc — z_pdoc.dtel.xml
+- Z_G_Pdoc — z_g_pdoc.dtel.xml
 - ZPURCHORGA — zpurchorga.dtel.xml
 
 ## Table Metadata
 - YTB_PO_HDR — ytb_po_hdr.tabl.xml
 - YTB_PO_ITM — ytb_po_itm.tabl.xml
-- Z_PDoc — z_pdoc.tabl.xml
-- Z_PDoc_D — z_pdoc_d.tabl.xml
+- Z_G_Pdoc — z_g_pdoc.tabl.xml
+- Z_G_Pdoc_D — z_g_pdoc_d.tabl.xml
 - ZPURCHDOCITEM — zpurchdocitem.tabl.xml
 - ZPURCHDOCITEM_D — zpurchdocitem_d.tabl.xml
 - ZPURCHDOCPRIO — zpurchdocprio.tabl.xml
@@ -81,7 +81,7 @@ Generated from the `src` directory. The list groups the main deliverable objects
 
 ## Number Range Object Metadata
 - YRAP_PO — yrap_po.nrob.xml
-- Z_PDoc — z_pdoc.nrob.xml
+- Z_G_Pdoc — z_g_pdoc.nrob.xml
 
 ## Message Class Metadata
 - YRAP_PO — yrap_po.msag.xml
