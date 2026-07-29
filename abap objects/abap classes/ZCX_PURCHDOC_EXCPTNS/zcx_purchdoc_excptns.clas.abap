@@ -91,18 +91,18 @@ public section.
       attr4 type scx_attrname value '',
     end of PURCHDOCITEMEXISTSINBUFFER .
   data MV_CURRENCY_CODE type TCURR_CURR .
-  data MV_PURCHASEDOCUMENT type Z_PDoc .
+  data MV_PURCHASEDOCUMENT type Z_G_PDoc .
   data MV_UNAME type SYUNAME .
-  data MV_PURCHASEDOCUMENTITEM type Z_PDoc .
+  data MV_PURCHASEDOCUMENTITEM type Z_G_PDoc .
 
   methods CONSTRUCTOR
     importing
       !TEXTID like IF_T100_MESSAGE=>T100KEY optional
       !PREVIOUS like PREVIOUS optional
       !MV_CURRENCY_CODE type TCURR_CURR optional
-      !MV_PURCHASEDOCUMENT type Z_PDoc optional
+      !MV_PURCHASEDOCUMENT type Z_G_PDoc optional
       !MV_UNAME type SYUNAME optional
-      !MV_PURCHASEDOCUMENTITEM type Z_PDoc optional .
+      !MV_PURCHASEDOCUMENTITEM type Z_G_PDoc optional .
 protected section.
 private section.
 ENDCLASS.
