@@ -58,7 +58,7 @@ Generated from the `src` directory. The list groups the main deliverable objects
 - ZPURCHDOC_NR — zpurchdoc_nr.doma.xml
 
 ## Data Element Metadata
-- ZPURCHASEDOCUMENTDTEL — zpurchasedocumentdtel.dtel.xml
+- Z_PDoc — z_pdoc.dtel.xml
 - ZPURCHORGA — zpurchorga.dtel.xml
 
 ## Table Metadata
